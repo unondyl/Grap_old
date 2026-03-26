@@ -1,6 +1,6 @@
 B1: mở file fin.inp nhập các quan hệ của các đỉnh
 VD: 1 2
     2 3
-Note: Vì lười chưa code nên phải nhập đủ 5 quan hệ
+Note: Vì lười chưa code nên phải nhập đủ 5 quan hệ // đã fix
 B2: Chạy file graphy.exe
 b3: Mở file index.html
