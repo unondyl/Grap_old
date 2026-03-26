@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mô phỏng Thuật toán Tô màu Đồ thị</title>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+
+    <style type="text/css">
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        background-color: #f4f4f9;
+      }
+      #mynetwork {
+        width: 800px;
+        height: 500px;
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Kết quả phân tích từ C++</h2>
+    <div id="mynetwork"></div>
+    <p><i>Mẹo: Bạn có thể dùng chuột để kéo thả các đỉnh đồ thị!</i></p>
+
+    <script type="text/javascript" src="data.js"></script>
+
+    <script type="text/javascript">
+      // Lấy khung div trống từ HTML
+      var container = document.getElementById("mynetwork");
+
+      // Cấu hình giao diện (trang trí cho đẹp)
+      var options = {
+        nodes: {
+          shape: "dot",
+          size: 30,
+          font: { size: 16, color: "#fffff", face: "Arial" },
+          borderWidth: 2,
+          borderColor: "#333",
+        },
+        edges: {
+          width: 2,
+          color: "#999",
+          smooth: { type: "continuous" }, // Làm cong các cạnh
+        },
+        physics: {
+          barnesHut: { springLength: 150 }, // Tạo lực đẩy/kéo lò xo giữa các đỉnh
+        },
+      };
+
+      // Bơm dữ liệu graphData (từ data.js) vào thư viện Vis.js
+      var network = new vis.Network(container, graphData, options);
+    </script>
+  </body>
+</html>
