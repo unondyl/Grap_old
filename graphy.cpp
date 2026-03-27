@@ -22,7 +22,7 @@ int main()
             out << "{ from: " << x << ", to: " << y << " }, \n";
             a[x][y]=1;a[y][x]=1;
             cout<<x<<" "<<y<<endl;
-              size_x=max(size_x,max(x,y));
+            size_x=max(size_x,max(x,y));
       }
       out << "  ],\n";
       //
@@ -81,7 +81,7 @@ int main()
       // Tạo biến toàn cục trong JS
       out << "  nodes: [\n";
       
-      // Bảng màu hệ HEX (Màu 1: Cam, 2: Xanh lá, 3: Xanh dương...)
+      // Bảng màu hệ HEX
       string colors[] = {"", "#FF5733", "#33FF57", "#3357FF", "#F033FF", "#FFFF33"};
       
       for (int i = 1; i <= size_x; i++) {
